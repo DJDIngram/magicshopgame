@@ -1,0 +1,11 @@
+.pause-menu-button {
+    flex-grow: 1;
+    margin-left: 45px;
+    margin-right: 45px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}

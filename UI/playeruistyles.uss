@@ -1,0 +1,47 @@
+.inventory-slot {
+    background-color: rgba(92, 92, 92, 0.7);
+    flex-grow: 1;
+    width: 100px;
+    height: auto;
+    border-left-color: rgb(195, 191, 188);
+    border-right-color: rgb(195, 191, 188);
+    border-top-color: rgb(195, 191, 188);
+    border-bottom-color: rgb(195, 191, 188);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.inventory-item-icon {
+    width: auto;
+    height: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.inventory-item-amount {
+    position: absolute;
+    top: 60px;
+    left: 54px;
+    height: 23px;
+    -unity-font: url('project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#Arial');
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    width: 43px;
+}
+
+.inventory-slot-selected {
+    border-left-color: rgba(204, 148, 57, 255);
+    border-right-color: rgba(204, 148, 57, 255);
+    border-top-color: rgba(204, 148, 57, 255);
+    border-bottom-color: rgba(204, 148, 57, 255);
+    border-left-width: 7px;
+    border-right-width: 7px;
+    border-top-width: 7px;
+    border-bottom-width: 7px;
+}

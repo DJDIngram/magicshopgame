@@ -1,0 +1,36 @@
+.construction-category-box-selected {
+    background-color: rgb(30, 91, 135);
+}
+
+.construction-category-box {
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgb(82, 82, 82);
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    border-left-width: 9px;
+    border-right-width: 9px;
+    border-top-width: 9px;
+    border-bottom-width: 9px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.construction-content-unselected {
+    display: none;
+}
+
+.construction-box {
+    flex-grow: 1;
+    color: rgb(255, 255, 255);
+    background-color: rgb(84, 84, 84);
+    align-items: center;
+    flex-shrink: 0;
+    min-height: 100px;
+}

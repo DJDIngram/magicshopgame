@@ -1,0 +1,48 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/menustyles.uss?fileID=7433441132597879392&amp;guid=466f6e45ccff0ff43ad05366ab07dcda&amp;type=3#menustyles" />
+    <Style src="project://database/Assets/UI/constructionuistyles.uss?fileID=7433441132597879392&amp;guid=0f86944688703394e873d3fe3249366d&amp;type=3#constructionuistyles" />
+    <Style src="project://database/Assets/UI/playeruistyles.uss?fileID=7433441132597879392&amp;guid=e9c66f6aa25521d4da058ed49f724f7a&amp;type=3#playeruistyles" />
+    <MenuManager picking-mode="Ignore" style="width: 100%; height: 100%;">
+        <ui:VisualElement name="PauseMenu" style="width: 100%; height: 100%; display: none; min-height: 100%;">
+            <ui:VisualElement name="pause-menu-background" style="margin-left: auto; margin-right: auto; width: 40%; height: 100%; background-color: rgba(0, 0, 0, 0.24); border-left-width: 10px; border-right-width: 10px; border-left-color: rgb(87, 87, 87); border-right-color: rgb(87, 87, 87); border-top-color: rgb(87, 87, 87); border-bottom-color: rgb(87, 87, 87); padding-left: 25px; padding-right: 25px; padding-top: 25px; padding-bottom: 25px;">
+                <ui:VisualElement name="title-section" style="flex-grow: 2; align-items: center; justify-content: center;">
+                    <ui:Label text="Magic Shoppe Demo" display-tooltip-when-elided="true" name="game-title" style="-unity-font-style: bold; font-size: 36px; color: rgb(0, 0, 0);" />
+                    <ui:Label text="Game Paused" display-tooltip-when-elided="true" name="paused" style="font-size: 24px; color: rgb(0, 0, 0); margin-top: 20px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="button-section" style="flex-grow: 4; margin-top: 25px; justify-content: space-around;">
+                    <ui:Button text="Resume Game" display-tooltip-when-elided="true" name="button-resume-game" class="pause-menu-button" />
+                    <ui:Button text="Save Game" display-tooltip-when-elided="true" name="button-save-game" class="pause-menu-button" />
+                    <ui:Button text="Load Game" display-tooltip-when-elided="true" name="button-load-game" class="pause-menu-button" />
+                    <ui:Button text="Quit Game" display-tooltip-when-elided="true" name="button-quit-game" class="pause-menu-button" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="GameUI" picking-mode="Ignore" style="justify-content: flex-end; width: 100%; height: 100%;">
+            <ui:VisualElement name="Construction" style="width: 35%; height: auto; justify-content: flex-end; flex-direction: column; display: none; position: absolute;">
+                <ui:VisualElement name="BuildContent" style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;">
+                    <ui:VisualElement name="floors-buildcontent" class="construction-content-unselected" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap-reverse; flex-shrink: 1; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+                    <ui:VisualElement name="furniture-buildcontent" class="construction-content-unselected" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap-reverse; flex-shrink: 1; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+                    <ui:VisualElement name="walls-buildcontent" class="construction-content-unselected" style="flex-grow: 1; flex-direction: row; flex-wrap: wrap-reverse; flex-shrink: 1; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="BuildCategories" style="justify-content: flex-start; background-color: rgba(0, 0, 0, 0.54); height: 100px; width: 100%; border-top-width: 5px; border-right-width: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 15px; border-bottom-right-radius: 0; flex-direction: row; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+                    <ui:Button text="Walls" display-tooltip-when-elided="true" name="walls-buildcategory" class="construction-category-box" />
+                    <ui:Button text="Flooring" display-tooltip-when-elided="true" name="floors-buildcategory" class="construction-category-box tab" />
+                    <ui:Button text="Furniture" display-tooltip-when-elided="true" name="furniture-buildcategory" class="construction-category-box tab" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="PlayerUI" picking-mode="Ignore" style="max-width: 100%; max-height: 100%; width: 100%; height: 100%; position: absolute; display: flex; align-items: center; justify-content: flex-end; top: 0; left: 1px;">
+                <ui:VisualElement name="PlayerInfo" style="flex-direction: row; min-height: 100px;">
+                    <ui:Button display-tooltip-when-elided="true" name="LeftHandInventory" class="inventory-slot inventory-slot-selected">
+                        <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="ItemAmount" class="inventory-item-amount" />
+                        <ui:VisualElement name="ItemIcon" class="inventory-item-icon" />
+                    </ui:Button>
+                    <ui:VisualElement name="HealthAndMana" style="flex-grow: 2; background-color: rgb(221, 147, 147); width: 300px;" />
+                    <ui:Button display-tooltip-when-elided="true" name="RightHandInventory" class="inventory-slot">
+                        <ui:Label tabindex="-1" display-tooltip-when-elided="true" name="ItemAmount" class="inventory-item-amount" />
+                        <ui:VisualElement name="ItemIcon" class="inventory-item-icon" />
+                    </ui:Button>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </MenuManager>
+</ui:UXML>
